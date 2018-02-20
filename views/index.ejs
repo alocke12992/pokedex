@@ -1,11 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <% include ./partials/head %>
   </head>
+  
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <header>
+      <% include ./partials/header %>
+    </header>
+    <h1>
+      <%= title %>
+    </h1>
+    <p>Welcome to
+      <%= title %>
+      <br>
+      The solution for your Pokedex needs.
+    </p>
   </body>
-</html>
+  
+  </html>
