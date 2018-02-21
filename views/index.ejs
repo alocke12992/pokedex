@@ -2,20 +2,25 @@
 <html>
   <head>
     <% include ./partials/head %>
+    
   </head>
   
   <body>
-    <header>
-      <% include ./partials/header %>
-    </header>
+    
+  
+  <center>
     <h1>
-      <%= title %>
+      <img  class='logo' src='<%= title %>'>
     </h1>
-    <p>Welcome to
-      <%= title %>
-      <br>
-      The solution for your Pokedex needs.
+    <p id='welcome'>Welcome to Dexter
+      <br> The solution for all of your Pokedex needs.
     </p>
+    <button class='home btn red'><a href="/pokedex">My Pokedex</a></button>
+    <button class='home btn red'><a href="/dex">Dex Reference</a></button>
+ 
+
+  </center>
+    
   </body>
   
   </html>

@@ -20,7 +20,7 @@
         <input type='text' name='name' placeholder='Name' />
         <input type='text' name='type' placeholder='Type' />
         <input type='text' name='hp' placeholder='HP' />
-        <button class='btn btn-waves' type='submit'>Add</button>
+        <button class='btn red' type='submit'>Add</button>
       </form>
     </div>
     <table class='table col m8 s12'>
@@ -46,7 +46,7 @@
               <%= pokemon.hp %>
             </td>
             <td>
-              <a class="btn" href=<%= editUrl %>>Edit</a>
+              <a class="btn red" href=<%= editUrl %>>Edit</a>
             </td>
             <td>
               <form method="POST" action=<%= url %>>
@@ -57,7 +57,6 @@
           </tr>
       </tbody>
     </table>
-    <% include ./partials/all %>
   </div>
 </body>
 
