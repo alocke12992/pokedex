@@ -45,7 +45,7 @@
       </thead>
       <tbody>
         <% dexter.forEach( function(dex) { %>
-            <% var url = "/dex/" + dex.dex + "?_method=POST" %>
+            
           <tr>
             <td>
               <img src='<%= dex.img %>' width =100px height=100px> 
@@ -62,12 +62,7 @@
             <td>
               <%= dex.hp %>
             </td>
-            <td>
-              <form action='/pokedex' method='post'>
-                <button class='btn red' type='submit'>Add</button>
-              </form>
-                
-            </td>
+           
             <% }); %>
       </tbody>
     </table>

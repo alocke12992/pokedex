@@ -10,7 +10,7 @@ router.get('/', function(req, res) {
     ]
   }) 
     .then( function(pokemon) {
-      return res.render('pokedex', {pokemon:pokemon});
+      return res.render('pokedex', {pokemon: pokemon});
     })
 });
 
