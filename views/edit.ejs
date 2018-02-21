@@ -12,6 +12,8 @@
       <% var url = "/pokedex/" + pokemon.id + "?_method=PUT" %>
         <form method="POST" action=<%= url %> >
           <input required name="name" value=<%= pokemon.name %> />
+          <input required name="type" value=<%= pokemon.type %> />
+          <input required name="hp" value=<%= pokemon.hp %> />
           <a href="/pokedex" class="btn red">Cancel</a>
           <button class="btn">Save</button>
         </form>

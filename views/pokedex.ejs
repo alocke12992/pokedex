@@ -17,6 +17,7 @@
       <form action='/pokedex' method='post'>
         <input type='text' name='name' placeholder='Name' />
         <input type='text' name='type' placeholder='Type' />
+        <input type='text' name='hp' placeholder='HP' />
         <button class='btn btn-waves' type='submit'>Add</button>
       </form>
     </div>
@@ -24,6 +25,7 @@
       <thead>
         <th>Name</th>
         <th>Type</th>
+        <th>HP</th>
         <th>Edit</th>
         <th>x</th>
       </thead>
@@ -37,6 +39,9 @@
             </td>
             <td>
               <%= pokemon.type %>
+            </td>
+            <td>
+              <%= pokemon.hp %>
             </td>
             <td>
               <a class="btn" href=<%= editUrl %>>Edit</a>

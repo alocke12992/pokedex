@@ -22,7 +22,8 @@ module.exports = router;
 router.post('/', function(req, res){
   var name = req.body.name;
   var type = req.body.type;
-  Pokemon.create({ name: name, type:type })
+  var hp = req.body.hp;
+  Pokemon.create({ name: name, type:type, hp:hp })
     .then( function() {
       res.redirect('/pokedex')
     })
@@ -52,7 +53,7 @@ router.get('/:id/edit', function (req, res) {
 
 router.put('/:id', function (req, res) {
   Pokemon.update(
-    { name: req.body.name },
+    { name: req.body.name, type: req.body.type, hp: req.body.hp },
     { where: { id: req.params.id } }
   )
     .then(function () {
