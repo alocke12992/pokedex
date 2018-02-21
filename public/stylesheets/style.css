@@ -1,1 +1,25 @@
 @import 'materialize.css';
+
+#im {
+  padding: 13px 0 0 10px;
+  width: 120px;
+}
+
+ #welcome { 
+   font-family: 'Andy-Bold';
+    font-size: 30px;
+}   
+
+.logo {
+  margin: 100px 0 0 0;
+}
+
+.home {
+  font-family: 'Andy-Bold' !important;
+  color: white !important;
+}
+
+.home a {
+  color: while;
+}
+
