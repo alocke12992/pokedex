@@ -1,0 +1,20 @@
+<html>
+
+  <head>
+    <% include ./partials/head %>
+  </head>
+
+  <body>
+    <header>
+      <% include ./partials/header %>
+    </header>
+    <div class="container">
+      <% var url = "/pokedex/" + pokemon.id + "?_method=PUT" %>
+        <form method="POST" action=<%= url %> >
+          <input required name="name" value=<%= pokemon.name %> />
+          <a href="/pokedex" class="btn red">Cancel</a>
+          <button class="btn">Save</button>
+        </form>
+    </div>
+  </body>
+</html>

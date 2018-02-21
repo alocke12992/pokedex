@@ -16,6 +16,7 @@
       <h3>Add Pokemon</h3>
       <form action='/pokedex' method='post'>
         <input type='text' name='name' placeholder='Name' />
+        <input type='text' name='type' placeholder='Type' />
         <button class='btn btn-waves' type='submit'>Add</button>
       </form>
     </div>
@@ -23,17 +24,33 @@
       <thead>
         <th>Name</th>
         <th>Type</th>
+        <th>Edit</th>
         <th>x</th>
       </thead>
       <tbody>
-        <% pokemon.forEach( function(poke) { %>
+        <% pokemon.forEach( function(pokemon) { %>
+          <% var url = "/pokedex/" + pokemon.id + "?_method=DELETE" %>
+            <% var editUrl = "/pokedex/" + pokemon.id + "/edit" %>
           <tr>
             <td>
-              <%= poke.name %>
+              <%= pokemon.name %>
+            </td>
+            <td>
+              <%= pokemon.type %>
+            </td>
+            <td>
+              <a class="btn" href=<%= editUrl %>>Edit</a>
+            </td>
+            <td>
+              <form method="POST" action=<%= url %>>
+                <button class="btn red">Remove</button>
+              </form>
             </td>
             <% }); %>
+          </tr>
       </tbody>
     </table>
+  </div>
 </body>
 
 </html>
